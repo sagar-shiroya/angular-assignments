@@ -1,0 +1,110 @@
+<!-- <div>Pipes</div> -->
+<h2>Currency Converter</h2>
+<div class="currency-converter">
+    <div class="currency">
+        <input type="text" [(ngModel)]="usdCurrency" placeholder="USD" value="0">
+        <p>INR: {{ usdCurrency | toINR:80 | currency: 'INR'}}</p><br><br>
+    </div>
+
+    <div class="currency">
+        <input type="text" [(ngModel)]="gbpCurrency" placeholder="GBP" value="0">
+        <p>INR: {{ gbpCurrency | toINR:92}}</p>
+    </div>
+</div>
+
+<h2>Currency Formats</h2>
+<div class="currency-converter">
+    <div class="currency">
+        <p>{{ 1600 | currency: 'INR' }}</p>
+    </div>
+    <div class="currency">
+        <p>{{ 250 | currency: 'USD' }}</p>
+    </div>
+    <div class="currency">
+        <p>{{ 50 | currency: 'GBP' }}</p>
+    </div>
+    <div class="currency">
+        <p>{{ 110 | currency: 'CAD' }}</p>
+    </div>
+</div>
+
+<h2>Date Formats</h2>
+<input type="datetime-local" [(ngModel)]="dateTime">
+<div class="currency-converter">
+    <div class="currency">
+        <p>{{ dateTime | date: 'shortTime' }}</p>
+    </div>
+    <div class="currency">
+        <p>{{ dateTime | date: 'mediumTime' }}</p>
+    </div>
+    <div class="currency">
+        <p>{{ dateTime | date: 'longTime' }}</p>
+    </div>
+    <div class="currency">
+        <p>{{ dateTime | date: 'shortDate' }}</p>
+    </div>
+    <div class="currency">
+        <p>{{ dateTime | date: 'mediumDate' }}</p>
+    </div>
+    <div class="currency">
+        <p>{{ dateTime | date: 'longDate' }}</p>
+    </div>
+    <div class="currency">
+        <p>{{ dateTime | date: 'short' }}</p>
+    </div>
+    <div class="currency">
+        <p>{{ dateTime | date: 'medium' }}</p>
+    </div>
+    <div class="currency">
+        <p>{{ dateTime | date: 'long' }}</p>
+    </div>
+</div>
+
+<h2>Number Formats</h2>
+<input type="number" [(ngModel)]="numberVal" value="0.0" placeholder="Number here...">
+<div class="currency-converter">
+    <div class="currency">
+        <span>2.3-4</span>
+        <p>{{ numberVal | number: '2.3-4' }}</p>
+    </div>
+    <div class="currency">
+        <span>1.4-5</span>
+        <p>{{ numberVal | number: '1.4-5' }}</p>
+    </div>
+    <div class="currency">
+        <span>3.2-3</span>
+        <p>{{ numberVal | number: '3.2-3' }}</p>
+    </div>
+    <div class="currency">
+        <span>3.4</span>
+        <p>{{ numberVal | number: '3.4' }}</p>
+    </div>
+    <div class="currency">
+        <span>2.0</span>
+        <p>{{ numberVal | number: '2.0' }}</p>
+    </div>
+</div>
+
+<h2>String Formats</h2>
+<input type="text" [(ngModel)]="stringVal" placeholder="Text here...">
+<div class="currency-converter">
+    <div class="currency">
+        <span>lowercase</span>
+        <p>{{ stringVal | lowercase }}</p>
+    </div>
+    <div class="currency">
+        <span>UPPERCASE</span>
+        <p>{{ stringVal | uppercase }}</p>
+    </div>
+    <div class="currency">
+        <span>Title Case</span>
+        <p>{{ stringVal | titlecase }}</p>
+    </div>
+    <div class="currency">
+        <span>SubString</span>
+        <input type="number" [(ngModel)]="startLength">
+        <input type="number" [(ngModel)]="endLength">
+        <p>{{ stringVal | slice:startLength:endLength | lowercase}}</p>
+    </div>
+</div>
+

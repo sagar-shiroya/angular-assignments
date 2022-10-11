@@ -1,0 +1,21 @@
+.currency-converter {
+    display: flex;
+    width: 90%;
+  }
+  .currency {
+    flex: 1;
+    border: 2px solid skyblue;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  input{
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 5px;
+  }
+
+  span{
+    color: rgb(0, 101, 126);
+  }

@@ -1,0 +1,47 @@
+<h2>Employee Data</h2>
+<label class="switch">
+    <input type="checkbox" [(ngModel)]="isChecked">
+    <span class="slider round"></span>
+</label>
+<div *ngIf="isChecked">
+    <table [style.backgroundColor]="bgColor">
+        <thead>
+            <th>Sr. No</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Employee ID</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employeeData;index as i">
+                <td>{{ i+1 }}</td>
+                <td>{{ employee.name }}</td>
+                <td>{{ employee.department }}</td>
+                <td>{{ employee.employeeID }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <label for="table-bg" style="color:black ;font-size: 15px;">Background Color</label>
+    <input type="color" [(ngModel)]="bgColor" value="#ffffff" name="table-bg">
+</div>
+
+<div>
+    <h2>Arithmetic Operation</h2>
+    <input type="text" name="number1" [(ngModel)]="number1">
+    <input type="text" name="number2" [(ngModel)]="number2"><br>
+    <button (click)="perform('add')" class="calcbutton">+</button>
+    <button (click)="perform('sub')" class="calcbutton">-</button>
+    <button (click)="perform('div')" class="calcbutton">/</button>
+    <button (click)="perform('mult')" class="calcbutton">*</button>
+
+    <div [ngSwitch]="operation" class="result">
+        <label>Result: </label>
+        <span *ngSwitchCase="'add'">{{ number1 + (number2-0)|number }}</span>
+        <span *ngSwitchCase="'sub'">{{ number1 - number2 }}</span>
+        <span *ngSwitchCase="'mult'">{{ number1 * number2 }}</span>
+        <span *ngSwitchCase="'div'">{{ number1 / number2 }}</span>
+    </div>
+</div>
+
+
+
