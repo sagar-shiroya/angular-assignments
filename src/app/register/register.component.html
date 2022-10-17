@@ -1,0 +1,37 @@
+<div class="container">
+    <h2>Employee Registration Form</h2>
+    <div class="row">
+        <div class="form-group required col-md-6">
+            <label for="name" class="control-label">Full Name</label>
+            <input type="text" class="form-control" id="name" required [(ngModel)]="name" name="name">
+            <span>{{ name }}</span>
+        </div>
+        <div class="col-md-6">
+            <label for="gender">Gender</label>
+            <input type="text" class="form-control" id="gender" required [(ngModel)]="gender" name="gender">
+            <span>{{ gender }}</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 form-group required">
+            <label for="email" class="control-label">Email</label>
+            <input type="text" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="col-md-6">
+            <label for="phone">Mobile Number</label>
+            <input type="text" class="form-control" id="phone" name="phone" required>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" class="form-control" id="dob" name="dob" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <input type="submit" value="Submit" class="btn btn-primary submit-btn">
+        </div>
+    </div>
+</div>
