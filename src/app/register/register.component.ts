@@ -7,11 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  submitted = false;
-  name="";
-  gender="";
-
-  onSubmit() { this.submitted = true; }
+  public countries = ["India", "USA", "UAE"];
+  public country = "India";
 
   constructor() { }
 
